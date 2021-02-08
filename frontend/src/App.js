@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Row, Col, Card, Jumbotron, Button } from "react-bootstrap";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container vari>
+      <Row>
+        <Col md={12}>
+          <Jumbotron>
+            <h1>Serverside Notebook!</h1>
+          </Jumbotron>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={{ span: 3, offset: 1 }}>
+          <Card>
+            <Card.Header>Files</Card.Header>
+            <Card.Body></Card.Body>
+          </Card>
+        </Col>
+        <Col md={7}>
+          <Card>
+            <Card.Header>Editer</Card.Header>
+            <Card.Body>
+              <textarea></textarea>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
